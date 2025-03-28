@@ -54,13 +54,13 @@ module.exports = {
                     const randomQuote = userQuotes[Math.floor(Math.random() * userQuotes.length)];
                     const embed = new EmbedBuilder()
                         .setTitle(randomQuote.name)
-                        .setDescription(`${randomQuote.description} (${randomQuote.id})`) // 修正: dep -> description
+                        .setDescription(`${randomQuote.dep} (${randomQuote.id})`) // 修正: dep -> description
                         .setImage(randomQuote.url);
 
                     await interaction.editReply({ embeds: [embed] });
                     console.log(`--- ${new Date()} (select)---\n${interaction.user.username} が ${randomQuote.name} の名言を選択\n${randomQuote.url}`);
                     const log_embed = new EmbedBuilder()
-                        .setTitle(`${randomQuote.description} (${randomQuote.id})`) // 修正: dep -> description
+                        .setTitle(`${randomQuote.dep} (${randomQuote.id})`) // 修正: dep -> description
                         .setColor('DarkOrange')
                         .setDescription(`${randomQuote.url}\r${new Date()}`);
                     webhook.send({
@@ -81,7 +81,7 @@ module.exports = {
             if(randomEmbedData.length > 0){
                 const embed = new EmbedBuilder()
                 .setTitle(randomEmbedData[0].name)
-                .setDescription(`${randomEmbedData[0].description} (${randomEmbedData[0].id})`) // 修正: dep -> description
+                .setDescription(`${randomEmbedData[0].dep} (${randomEmbedData[0].id})`) // 修正: dep -> description
                 .setColor('Blue')
                 .setImage(randomEmbedData[0].url);
                 
