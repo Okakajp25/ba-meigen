@@ -1,8 +1,9 @@
 const { SlashCommandBuilder, WebhookClient, EmbedBuilder } = require('discord.js')
 const { embedMessages } = require('../meigen_list')
 const { PrismaClient } = require('@prisma/client')
+require('dotenv').config()
 
-const webhook = new WebhookClient({ url:'https://discord.com/api/webhooks/1348641171538448395/CKoGximeH5Y3oGFPAsYRa6yFJvWcoV-EtRIeu7JmWZpYhrbiy8JltAMBFJXqqd5HENWk'})
+const webhook = new WebhookClient({ url:`${process.env.WEBHOOK_URL}`})
 const prisma = new PrismaClient()
 module.exports = {
     data: new SlashCommandBuilder()

@@ -2,9 +2,10 @@ const { SlashCommandBuilder, EmbedBuilder, WebhookClient } = require('discord.js
 const { S3 } = require('aws-sdk')
 const { PrismaClient } = require('@prisma/client')
 const { json } = require('../meigen_list')
+require('dotenv').config()
 
 const prisma = new PrismaClient()
-const webhook = new WebhookClient({ url:'https://discord.com/api/webhooks/1348641171538448395/CKoGximeH5Y3oGFPAsYRa6yFJvWcoV-EtRIeu7JmWZpYhrbiy8JltAMBFJXqqd5HENWk'})
+const webhook = new WebhookClient({ url:`${process.env.WEBHOOK_URL}`})
 const choices = Object.entries(json).map(([value, name]) => ({
     name,
     value,
