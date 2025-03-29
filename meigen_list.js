@@ -15,8 +15,8 @@ export const embedMessages = [
 	{title: 'aina', description: 'aina', url: 'https://cdn.discordapp.com/attachments/1325021344231981118/1348266918577967277/quote_1339511233455591424.png?ex=67ced6ea&is=67cd856a&hm=cd69212e41d1ed10c58ee1909b35e343465c735faf23814136cf4fdbbb858b7e&'},
 	{title: 'aina', description: 'aina', url: 'https://media.discordapp.net/attachments/1325021344231981118/1348266919156777100/quote_1347579309803704411.png?ex=67ced6eb&is=67cd856b&hm=3d095bb61429a189ac455e86f510c27eb6a98be0f4cf23ecc3f107d60b3737b2&'},
 	{title: 'kuma', description: 'kuma', url: 'https://cdn.discordapp.com/attachments/1325021344231981118/1348275513482809354/quote_1348275238189924414.png?ex=67cedeec&is=67cd8d6c&hm=7f1a43ab5d2ae33146372a60066960ab4567171d6efd9f0874f9b608f9242864&'},
-	{title: 'maruti', description: 'maruti', url: 'https://cdn.discordapp.com/attachments/1104728600214777958/1348284101865771009/IMG_6436.png?ex=67cee6eb&is=67cd956b&hm=9a90d2eef2bc5bf25ad013c786c92034649fb05f88b3702cc7b45d03009fa849&'},
-	{title: 'maruti', description: 'maruti', url: 'https://cdn.discordapp.com/attachments/1104728600214777958/1348284103119605830/IMG_6219.png?ex=67cee6ec&is=67cd956c&hm=d7051b0d1965e690155ebca6d6cc56357cd05fa6b3c7e38e6202127d90028677&'},
+	{title: 'minna', description: 'minna', url: 'https://cdn.discordapp.com/attachments/1104728600214777958/1348284101865771009/IMG_6436.png?ex=67cee6eb&is=67cd956b&hm=9a90d2eef2bc5bf25ad013c786c92034649fb05f88b3702cc7b45d03009fa849&'},
+	{title: 'minna', description: 'minna', url: 'https://cdn.discordapp.com/attachments/1104728600214777958/1348284103119605830/IMG_6219.png?ex=67cee6ec&is=67cd956c&hm=d7051b0d1965e690155ebca6d6cc56357cd05fa6b3c7e38e6202127d90028677&'},
 	{title: 'aina', description: 'aina', url: 'https://cdn.discordapp.com/attachments/1104728600214777958/1348284103757140009/IMG_6203.png?ex=67cee6ec&is=67cd956c&hm=a1902db2e49d76a93e131cdd79e4ae233da05e7efc3df1f3b5b46f3bd5b1142c&'},
 	{title: 'aina', description: 'aina', url: 'https://cdn.discordapp.com/attachments/1104728600214777958/1348284104122171493/IMG_6201.png?ex=67cee6ec&is=67cd956c&hm=5020528b2d255b6f993b0d259af162540cad7c5f61c1df678acd1faee094e3e2&'},
 	{title: 'aina', description: 'aina', url: 'https://cdn.discordapp.com/attachments/1104728600214777958/1348284105388855347/IMG_6198.png?ex=67cee6ec&is=67cd956c&hm=5c1eae72b3ba4c845f04c8629dbf54d2ab38005e77320b0c592aed1e32ba4d1e&'},
@@ -64,9 +64,12 @@ export const json = {
 	"kuma":"kuma",
 	"aina":"aina",
 	"gartic":"gartic",
-	"maruti":"maruti",
+	"minna":"minna",
 	"pasch":"pasch",
+	"yuuma":"yuuma",
 	"masato&meme":"masato&meme",
-	"yuuma":"yuuma"
+	"aina&meme":"aina&meme",
+	"kuroi&meme":"kuroi&meme",
+	"aina&meme&masato":"aina&meme&masato",
 }
 

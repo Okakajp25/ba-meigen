@@ -1,7 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits, PresenceUpdateStatus, ActivityType, WebhookClient, EmbedBuilder, ChannelType } = require('discord.js');
-const { token } = require('./config.json');
 const { embedMessages } = require('./meigen_list');
 const { PrismaClient } = require('@prisma/client');
 require('dotenv').config()
@@ -24,7 +23,7 @@ client.on('ready', async () => {
 	client.channels.cache.get('1104728600214777958').send({ embeds: [embed]})
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
 
 
 client.commands = new Collection();
