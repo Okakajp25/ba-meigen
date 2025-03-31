@@ -1,0 +1,5 @@
+#!/bin/bash
+DATE=`date`
+cd /home/okaka/bot; git add .
+cd /home/okaka/bot; git commit -m "$DATE"
+cd /home/okaka/bot; git push
