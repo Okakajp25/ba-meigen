@@ -20,7 +20,7 @@ client.on('ready', async () => {
 	.setTitle("Server list")
 	.setDescription(`${guilds}\r${guilds_name}\r\rPing:${client.ws.ping}ms`)
 	.setColor("Gold");
-	client.channels.cache.get('1104728600214777958').send({ embeds: [embed]})
+	client.channels.cache.get(process.env.CHANNEL_ID).send({ embeds: [embed]})
 });
 
 client.login(process.env.TOKEN);
@@ -46,7 +46,7 @@ client.on('interactionCreate', async interaction => {
 	const guildId = interaction.guildId
 	const channelId = interaction.channelId
 	const msgId = interaction.targetMessage
-	client.channels.cache.get('1104728600214777958').send(`Ping: ${client.ws.ping}ms\rGuild: ${guildId}\rChannel: ${channelId}\rTargetId: ${msgId}`)
+	client.channels.cache.get(process.env.CHANNEL_ID).send(`Ping: ${client.ws.ping}ms\rGuild: ${guildId}\rChannel: ${channelId}\rTargetId: ${msgId}`)
 
 	const command = interaction.client.commands.get(interaction.commandName);
 
