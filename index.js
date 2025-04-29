@@ -11,8 +11,8 @@ const webhook = new WebhookClient({ url:`${process.env.WEBHOOK_URL}}`})
 const prisma = new PrismaClient()
 
 client.on('ready', async () => {
-	console.log(`${client.user.tag}でログインしました。`);
-	await client.user.setStatus(PresenceUpdateStatus.Idle)
+	await update()
+	console.log(`${client.user.tag}でログインしました。`)
 	const guilds = client.guilds.cache.map(guilds => guilds.id).join("\n")
 	const guilds_name = client.guilds.cache.map(guilds => guilds.name).join("\n")
 	//client.guilds.cache.map(guilds => guilds.channels.cache.filter(channel => channel.type === ChannelType.GuildText)).forEach(channel => {console.log(`${channel}`)})
@@ -65,16 +65,21 @@ client.on('interactionCreate', async interaction => {
 
 
 async function update() {
-	const db_id = await prisma.meigen.findMany({
-		select: {
-			id: true
-		}
-	})
-	const id = db_id.map(item => Number(item.id))
-	const maxId = Math.max(...id)
-	client.user.setActivity({
-		name: `現在登録されている迷言の数は${maxId}個です`,
-		url: 'https://www.youtube.com/watch?v=LLjfal8jCYI',
-		type: ActivityType.Streaming
-	})
+	setInterval(async () => {
+		const db_id = await prisma.meigen.findMany({
+			select: {
+				id: true
+			}
+		})
+		client.user.setStatus(PresenceUpdateStatus.Idle)
+		const id = db_id.map(item => Number(item.id))
+		const maxId = Math.max(...id)
+		client.user.setStatus(PresenceUpdateStatus.Idle)
+		client.user.setActivity({
+			name: `現在登録されている迷言の数は${maxId}個です`,
+			url: 'https://www.youtube.com/watch?v=LLjfal8jCYI',
+			type: ActivityType.Streaming
+		})
+		console.log(`count ${maxId}`)
+	}, 30000)
 }
