@@ -80,6 +80,5 @@ async function update() {
 			url: 'https://www.youtube.com/watch?v=LLjfal8jCYI',
 			type: ActivityType.Streaming
 		})
-		console.log(`count ${maxId}`)
 	}, 30000)
 }
