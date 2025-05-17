@@ -1,4 +1,4 @@
-# これのリンクをコピーしてDiscordに張り付けてアクセスすると表示されます
+# これのurlタブの中のリンクをコピーしてDiscordに張り付けてアクセスすると表示されます
 | id | name | dep | url |
 | :--- | :--- | :--- | :--- |
 | 1 | masato | masato | [image](https://cdn.discordapp.com/attachments/1190214711099260988/1347897774028619786/quote_1347895871257186395.png?ex=67ce27e0&is=67ccd660&hm=15fef2ca3cae3a73ff45ab1caae2f61e81f418db8f7c47977e11940a14cb2cc9&) |
