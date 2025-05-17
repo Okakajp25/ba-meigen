@@ -1,7 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits, PresenceUpdateStatus, ActivityType, WebhookClient, EmbedBuilder, ChannelType } = require('discord.js');
-const { embedMessages } = require('./meigen_list');
+const { Client, Collection, GatewayIntentBits, PresenceUpdateStatus, ActivityType, WebhookClient, EmbedBuilder } = require('discord.js');
 const { PrismaClient } = require('@prisma/client');
 require('dotenv').config()
 

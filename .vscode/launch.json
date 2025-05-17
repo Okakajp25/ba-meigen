@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "command": "npx prisma studio",
+            "name": "Prisma studio",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
             "command": "bun start",
             "name": "Run bun start",
             "request": "launch",
